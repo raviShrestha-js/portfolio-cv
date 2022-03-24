@@ -4,40 +4,60 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-dark: #3f7eb3;
+  --color-second: #6ba7cc;
+  --color-third: #aedbf0;
+  --color-white: #fafeff;
+  --color-light: #e2fcff;
+  --color-last: #cbf1fa;
+  --padding-left-nav: 220px;
+}
+
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 7fr;
-  grid-template-rows: 95vh 5vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 40px;
   grid-template-areas:
-    "navbar main"
-    "navbar footer";
+    "main"
+    "footer";
 }
 
 nav {
-  grid-area: navbar;
-  height: 100vh;
-  position: sticky;
+  height: 95vh;
+  width: 200px;
+  margin-top: 2.5vh;
+  margin-left: 10px;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  /* From https://css.glass */
+  background: rgba(206, 208, 202, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(206, 208, 202, 1);
 }
 nav ul li {
   list-style: none;
-  padding: 10px;
-  margin: 10px;
+  padding: 15px;
+  padding-left: 30px;
   font-size: 1.3em;
+}
 
-  border-radius: 20px;
+nav ul {
+  width: 100%;
 }
 
 nav ul li:hover {
-  background-color: orange;
-  color: white;
+  background-color: var(--color-second);
+  color: var(--color-white);
 }
 
 nav ul a {
@@ -50,10 +70,11 @@ main {
 }
 
 .home {
-  background-image: url(images/bgImg.jpg);
+  background-image: url(images/nepal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 100vh;
+  padding-left: var(--padding-left-nav);
 }
 
 footer {
