@@ -14,7 +14,7 @@
   --padding-left-nav: 220px;
 }
 
-.container {
+.container-main {
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -23,6 +23,8 @@
     "main"
     "footer";
 }
+
+/* navigation bar */
 
 nav {
   height: 95vh;
@@ -36,13 +38,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* From https://css.glass */
-  background: rgba(206, 208, 202, 0.18);
+  background: rgba(63, 126, 179, 0.46);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.9px);
   -webkit-backdrop-filter: blur(6.9px);
-  border: 1px solid rgba(206, 208, 202, 1);
+  border: 1px solid rgba(63, 126, 179, 0.55);
 }
 nav ul li {
   list-style: none;
@@ -53,6 +54,8 @@ nav ul li {
 
 nav ul {
   width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 nav ul li:hover {
@@ -65,6 +68,8 @@ nav ul a {
   color: black;
 }
 
+/* navigation bar */
+
 main {
   grid-area: main;
 }
@@ -75,6 +80,45 @@ main {
   background-repeat: no-repeat;
   height: 100vh;
   padding-left: var(--padding-left-nav);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.img-holder {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background: rgba(107, 167, 204, 0.34);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px);
+  border: 1px solid rgba(107, 167, 204, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  width: 150px;
+  border: 2px solid;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+
+button:hover {
+  background-color: var(--color-third);
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+img {
+  border: 1px solid;
+  border-radius: 50%;
 }
 
 footer {
