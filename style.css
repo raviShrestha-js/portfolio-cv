@@ -15,6 +15,13 @@
 }
 
 .container-main {
+  background-image: url(images/nepal.jpg);
+  height: auto;
+  /* parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -75,13 +82,8 @@ main {
 }
 
 .home {
-  background-image: url(images/nepal.jpg);
   height: 100vh;
-  /* parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   padding-left: var(--padding-left-nav);
   display: flex;
   justify-content: center;
@@ -130,6 +132,7 @@ button:hover {
   margin-top: 10px;
   display: flex;
   background-color: var(--color-white);
+
   /* justify-content: center; */
 }
 
@@ -221,7 +224,16 @@ button:hover {
 .info-details:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+.skills {
+  height: 100vh;
+  width: 100%;
+  margin-top: 20px;
+}
 
+.bg {
+  background-color: #3f7eb3;
+  height: 100vh;
+}
 footer {
   padding-left: var(--padding-left-nav);
   grid-area: footer;
