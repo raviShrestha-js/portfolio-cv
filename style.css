@@ -12,11 +12,13 @@
   --color-light: #e2fcff;
   --color-last: #cbf1fa;
   --padding-left-nav: 220px;
+  --font-head: "Press Start 2P", cursive;
+  --font-main: "Iceberg", cursive;
 }
 
 .container-main {
   background-image: url(images/nepal.jpg);
-  height: auto;
+  height: 100vh;
   /* parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -52,10 +54,17 @@ nav {
   -webkit-backdrop-filter: blur(6.9px);
   border: 1px solid rgba(63, 126, 179, 0.55);
 }
+
+nav h2 {
+  font-family: var(--font-head);
+  font-size: 1em;
+}
+
 nav ul li {
   list-style: none;
   padding: 15px;
   padding-left: 30px;
+  font-family: var(--font-main);
   font-size: 1.3em;
 }
 
@@ -113,11 +122,13 @@ button {
   width: 150px;
   border: 2px solid;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
+  font-family: var(--font-main);
+  font-size: 1.3em;
 }
 
 button:hover {
   background-color: var(--color-third);
-  color: var(--color-dark);
+  color: black;
   cursor: pointer;
 }
 
@@ -143,6 +154,15 @@ button:hover {
   align-items: center;
   padding-top: 50px;
 }
+h1 {
+  font-family: var(--font-head);
+  margin-bottom: 15px;
+}
+
+.content h2 {
+  font-size: 2.2em;
+  font-family: var(--font-main);
+}
 
 .img-contain {
   background-image: url(images/flag.jpg);
@@ -166,6 +186,10 @@ button:hover {
   gap: 30px;
   align-items: center;
   justify-content: center;
+}
+
+.auto-typed {
+  color: var(--color-dark);
 }
 
 .summary {
@@ -212,6 +236,11 @@ button:hover {
   -webkit-backdrop-filter: blur(6.9px);
   border: 1px solid rgba(63, 126, 179, 0.55);
 }
+
+h3 {
+  font-family: var(--font-main);
+}
+
 .logo-container {
   width: 100%;
   display: flex;
@@ -231,8 +260,13 @@ button:hover {
 }
 
 .bg {
-  background-color: #3f7eb3;
+  background-color: var(--color-second);
   height: 100vh;
+  padding-left: var(--padding-left-nav);
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 footer {
   padding-left: var(--padding-left-nav);
