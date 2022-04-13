@@ -55,6 +55,11 @@ nav {
   border: 1px solid rgba(63, 126, 179, 0.55);
 }
 
+nav img {
+  height: 100px;
+  width: 180px;
+}
+
 nav h2 {
   font-family: var(--font-head);
   font-size: 1em;
@@ -265,12 +270,123 @@ h3 {
   padding-left: var(--padding-left-nav);
   padding-top: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
 }
+
+/* skills bar */
+.wrapper {
+  height: calc(100vh - 20px - 50px);
+  background-color: var(--color-light);
+  margin: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 1px solid;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  width: 70%;
+}
+
+.each-skill {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0px 20px;
+}
+
+.bar-container {
+  width: 100%;
+
+  background-color: var(--color-white);
+}
+.skill-bar {
+  height: 10px;
+}
+.html {
+  width: 86%;
+  background-color: green;
+}
+.css {
+  width: 75%;
+  background-color: #264de4;
+}
+.js {
+  width: 65%;
+  background-color: #f0db4f;
+}
+.react {
+  width: 50%;
+  background-color: #61dbfb;
+}
+.php {
+  width: 60%;
+  background-color: #8993be;
+}
+.mysql {
+  width: 40%;
+  background-color: #00758f;
+}
+
+.git {
+  width: 70%;
+  background-color: #f1502f;
+}
+.github {
+  width: 80%;
+  background-color: #171515;
+}
+/* skills bar end */
 footer {
   padding-left: var(--padding-left-nav);
   grid-area: footer;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1210px) {
+  nav {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    margin-right: 10px;
+    right: 0;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  nav img {
+    height: 50px;
+    width: 90px;
+  }
+  .home {
+    padding-left: 0px;
+  }
+  .img-contain {
+    display: none;
+  }
+  .about-me {
+    height: auto;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .bg {
+    padding-left: 0px;
+  }
+  .wrapper {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  footer {
+    padding-left: 0px;
+  }
 }
