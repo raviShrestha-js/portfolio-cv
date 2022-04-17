@@ -18,3 +18,18 @@ window.onscroll = () => {
     }
   });
 };
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("activate");
+  navMenu.classList.toggle("activate");
+});
+
+navList.forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("activate");
+    navMenu.classList.remove("activate");
+  })
+);

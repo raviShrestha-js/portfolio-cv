@@ -96,6 +96,21 @@ nav ul a {
   color: black;
 }
 
+/* hamburger responsive menu  */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
 /* navigation bar */
 
 main {
@@ -107,9 +122,8 @@ main {
 
   padding-left: var(--padding-left-nav);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 150px;
 }
 
 .img-holder {
@@ -360,6 +374,7 @@ h3 {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .edu-timeline::after {
@@ -431,6 +446,7 @@ h3 {
   background-color: white;
   position: relative;
   border-radius: 6px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -448,8 +464,9 @@ footer {
     width: 100%;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
-    margin-right: 10px;
+    margin: 0px;
     right: 0;
+    z-index: 2;
   }
   nav ul {
     display: flex;
@@ -485,8 +502,85 @@ footer {
     height: auto;
     padding-bottom: 10px;
   }
+  #education {
+    padding-left: 0px;
+  }
   footer {
     padding-left: 0px;
   }
 }
-/* responsive with max width 1210 px */
+
+/* responsive nav bar with max width 920px */
+@media (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.activate .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.activate .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.activate .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  nav ul {
+    position: fixed;
+    left: -110%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background: rgba(63, 126, 179, 0.46);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  nav ul li {
+    margin: 16px 0;
+  }
+  nav ul.activate {
+    left: 0;
+  }
+}
+
+/* responsive with max width 600px  */
+@media (max-width: 600px) {
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+  .summary {
+    width: 100%;
+  }
+  .information {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .edu-timeline::after {
+    left: 31px;
+  }
+  .edu-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .edu-container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  .right {
+    left: 0%;
+  }
+}
