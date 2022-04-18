@@ -541,6 +541,9 @@ footer {
   nav ul.activate {
     left: 0;
   }
+  .summary {
+    width: 90%;
+  }
 }
 
 /* responsive with max width 600px  */
