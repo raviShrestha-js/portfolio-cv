@@ -17,7 +17,7 @@
 }
 
 .container-main {
-  background-image: url(images/nepal.jpg);
+  background-image: url(/static/images/nepal.jpg);
   height: 100vh;
   /* parallax scrolling effect */
   background-attachment: fixed;
@@ -111,7 +111,7 @@ nav ul a {
   background-color: black;
 }
 
-/* navigation bar */
+/* navigation bar end */
 
 main {
   grid-area: main;
@@ -189,7 +189,7 @@ h1 {
 }
 
 .img-contain {
-  background-image: url(images/flag.jpg);
+  background-image: url(/static/images/flag.jpg);
   width: 350px;
   height: 100vh;
   background-position: center;
@@ -660,11 +660,20 @@ footer {
     right: 0;
     z-index: 2;
   }
+
   nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
   }
+  nav ul li {
+    padding: 15px;
+  }
+
+  nav ul .active {
+    margin: 0;
+  }
+
   nav img {
     height: 50px;
     width: 90px;
@@ -711,17 +720,20 @@ footer {
   }
 }
 
-/* responsive nav bar with max width 920px */
+/* responsive nav bar with max width 1000px */
 @media (max-width: 1000px) {
   .hamburger {
     display: block;
   }
+
   .hamburger.activate .bar:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.activate .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .hamburger.activate .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }

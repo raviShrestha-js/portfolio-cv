@@ -1,7 +1,7 @@
 const sections = document.querySelectorAll("section");
 const navList = document.querySelectorAll("nav ul li");
 window.onscroll = () => {
-  var current = "";
+  let current = "";
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
@@ -9,7 +9,6 @@ window.onscroll = () => {
       current = section.getAttribute("id");
     }
   });
-  console.log(current);
 
   navList.forEach((li) => {
     li.classList.remove("active");
