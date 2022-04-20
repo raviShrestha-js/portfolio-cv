@@ -17,7 +17,7 @@
 }
 
 .container-main {
-  background-image: url(/static/images/nepal.jpg);
+  background-image: url(../images/nepal.jpg);
   height: 100vh;
   /* parallax scrolling effect */
   background-attachment: fixed;
@@ -189,7 +189,7 @@ h1 {
 }
 
 .img-contain {
-  background-image: url(/static/images/flag.jpg);
+  background-image: url(../images/flag.jpg);
   width: 350px;
   height: 100vh;
   background-position: center;
