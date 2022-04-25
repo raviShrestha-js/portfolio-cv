@@ -476,18 +476,26 @@
           </div>
           <div class="row2">
             <div class="col1">
-              <form>
-                <input type="text" placeholder="Name" id="name" required />
+              <form action="https://formspree.io/f/meqnpqvw" method="POST">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  id="name"
+                  name="name"
+                  required
+                />
                 <input
                   type="text"
                   placeholder="Email"
                   id="email"
+                  name="email"
                   required
                 /><br />
                 <input
                   type="text"
                   placeholder="Subject"
                   id="subject"
+                  name="subject"
                   required
                 /><br />
                 <textarea
@@ -495,10 +503,11 @@
                   cols="60"
                   placeholder="Message"
                   id="message"
+                  name="message"
                   required
                 ></textarea>
+                <button type="submit">Submit</button>
               </form>
-              <button>Submit</button>
             </div>
             <div class="col1" id="google-map">
               <iframe
@@ -531,6 +540,10 @@
         typeSpeed: 100,
         backSpeed: 100,
         loop: true,
+      });
+      const form = document.querySelector("form");
+      form.addEventListener("submit", () => {
+        form.reset();
       });
     </script>
     <script

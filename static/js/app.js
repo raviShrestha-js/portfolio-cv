@@ -32,3 +32,8 @@ navList.forEach((n) =>
     navMenu.classList.remove("activate");
   })
 );
+
+const form = document.querySelector("form");
+form.addEventListener("submit", () => {
+  form.reset();
+});
